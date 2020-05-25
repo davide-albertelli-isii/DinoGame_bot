@@ -39,6 +39,15 @@
         box.style.visibility="hidden";
     }
 };
+
+var touchedElement = document.getElementById("messageBox");
+touchedElement.addEventListener("touchstart", funcTouchStart, false);
+
+function funcTouchStart(e) {
+    var box = document.getElementById("messageBox");
+    box.style.visibility="hidden";
+}
+
 </script>
     
 </html>
