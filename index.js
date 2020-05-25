@@ -3,7 +3,6 @@ const path = require("path");
 const TelegramBot = require("node-telegram-bot-api");
 const dotenv = require("dotenv");
 const server = express();
-const bot = new TelegramBot(token, { polling: true });
 const port = process.env.PORT || 5000;
 const gameName = "dinosaurGame_bot";
 const queries = {};
@@ -14,6 +13,9 @@ dotenv.config({
 });
 
 const token = process.env["TELEGRAM_TOKEN"];
+
+// Bot initialization
+const bot = new TelegramBot(token, { polling: true });
 
 server.use(express.static(path.join(__dirname, "public")));
 
