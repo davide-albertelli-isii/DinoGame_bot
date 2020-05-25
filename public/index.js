@@ -2,6 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
+
+var url = new URL(location.href);
+var playerid = url.searchParams.get("id");
+
 (function () {
     'use strict';
     /**
@@ -2093,6 +2097,12 @@
                 distance).substr(-this.maxScoreUnits);
 
             this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
+
+            // Submit scores to telegram
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://dinogamebot.herokuapp.com/highscore/" + distance + "?id" + playerid;
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
         },
 
         /**
