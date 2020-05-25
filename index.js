@@ -31,8 +31,7 @@ bot.onText(/start/, (msg) =>
 bot.onText(/help/, (msg) =>
   bot.sendMessage(
     msg.from.id,
-    "This bot allows the user to play Chromium's T-Rex game from your web browser, to start a game use the command /game"
-  )
+    "To start a game write the /game command, you will be presented with a link to open the game in the in-app browser, once in the game you can start playing by tapping the screen or by pressing spacebar if you are in the web version of telegram, the objective of the game is simple: survive for as long as you can without hitting the obstacles, to do so you can tap the screen or press spacebar to jump and avoid the obstacles but be careful because as the score increases so does the speed."  )
 );
 
 // About command
