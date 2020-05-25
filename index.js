@@ -19,16 +19,24 @@ const bot = new TelegramBot(token, { polling: true });
 
 server.use(express.static(path.join(__dirname, "public")));
 
+// Welcome message
+bot.onText(/start/, (msg) =>
+  bot.sendMessage(
+    msg.from.id,
+    "Welcome to DinoGame bot! from this bot you can play the classic T-Rex game from Chromium directly from the in-app browser, if you want more info use the command /help"
+  )
+);
+
 // Help command
 bot.onText(/help/, (msg) =>
   bot.sendMessage(
     msg.from.id,
-    "This bot allows the user to play the chrome's t-rex game from your web browser, to start a game use the command /start or /game"
+    "This bot allows the user to play Chromium's T-Rex game from your web browser, to start a game use the command /game"
   )
 );
 
 // start|game command
-bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
+bot.onText(/game/, (msg) => bot.sendGame(msg.from.id, gameName));
 
 // callback of /start command
 bot.on("callback_query", function (query) {
