@@ -4,7 +4,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const dotenv = require("dotenv");
 const server = express();
 const port = process.env.PORT || 5000;
-const gameName = "dinosaurGame_bot";
+const gameName = "dinoGame";
 const queries = {};
 
 // Get the enviromental variables
