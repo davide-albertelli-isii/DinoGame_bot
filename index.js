@@ -39,7 +39,7 @@ bot.on("callback_query", function (query) {
     );
   } else {
     queries[query.id] = query;
-    let gameurl = "https://dinogamebot.herokuapp.com/index.html? id=" + query.id;
+    let gameurl = "https://dinogamebot.herokuapp.com/index.html?id=" + query.id;
     bot.answerCallbackQuery({
       callback_query_id: query.id,
       url: gameurl,
