@@ -16,14 +16,16 @@
   </head>
 
   <body id="t" class="offline">
-    <div id="messageBox" class="sendmessage" onclick="hideDiv()">
-      <h1 style="text-align: center; font-family: 'Open Sans', sans-serif;">
-        Tap the screen to start
-      </h1>
-      <br />
-      <br />
-      <div class="niokbutton" onclick="okbuttonsend()"></div>
-    </div>
+    <header>
+      <div id="messageBox" class="sendmessage" onclick="hideDiv()">
+        <h1 style="text-align: center; font-family: 'Open Sans', sans-serif;">
+          Tap the screen to start
+        </h1>
+        <div class="niokbutton" onclick="okbuttonsend()"></div>
+      </div>
+    </header>
+    <br />
+    <br />
     <div id="main-frame-error" class="interstitial-wrapper">
       <div id="main-content">
         <div class="icon icon-offline" alt=""></div>
@@ -63,6 +65,5 @@
         box.style.visibility = "hidden";
       }
     };
-
   </script>
 </html>
