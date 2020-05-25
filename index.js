@@ -35,6 +35,14 @@ bot.onText(/help/, (msg) =>
   )
 );
 
+// About command
+bot.onText(/about/, (msg) =>
+  bot.sendMessage(
+    msg.from.id,
+    "If you want to check out the code for curiosity or to reuse it you can go to https://github.com/davide-albertelli-isii/DinoGame_bot"
+  )
+);
+
 // start|game command
 bot.onText(/game/, (msg) => bot.sendGame(msg.from.id, gameName));
 
