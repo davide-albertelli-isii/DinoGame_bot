@@ -18,9 +18,6 @@
   <body id="t" class="offline">
     <header>
       <div id="messageBox" class="sendmessage" onclick="hideDiv()">
-        <h1 style="text-align: center; font-family: 'Open Sans', sans-serif;">
-          Tap the screen to start
-        </h1>
         <div class="niokbutton" onclick="okbuttonsend()"></div>
       </div>
     </header>
@@ -54,7 +51,10 @@
         </template>
       </div>
     </div>
+    <button onclick="TelegramGameProxy.shareScore()">Share score</button>
   </body>
+
+  <script src="https://telegram-js.azureedge.net/js/games.js"></script>
 
   <script>
     document.onkeydown = function (evt) {
